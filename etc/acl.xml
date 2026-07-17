@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * RequestDesk Q&A ACL Configuration
+ *
+ * @category  RequestDesk
+ * @package   RequestDesk_Qa
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::content">
+                    <resource id="RequestDesk_Qa::qa" title="RequestDesk Q&amp;A Library" sortOrder="65">
+                        <resource id="RequestDesk_Qa::pairs" title="Manage Q&amp;A Pairs" sortOrder="10"/>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

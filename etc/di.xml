@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * RequestDesk Q&A Dependency Injection Configuration
+ *
+ * @category  RequestDesk
+ * @package   RequestDesk_Qa
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Q&A Pair Grid Data Source -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="requestdesk_qa_pair_listing_data_source" xsi:type="string">RequestDesk\Qa\Model\ResourceModel\QaPair\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="RequestDesk\Qa\Model\ResourceModel\QaPair\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">requestdesk_qa_pair</argument>
+            <argument name="resourceModel" xsi:type="string">RequestDesk\Qa\Model\ResourceModel\QaPair</argument>
+        </arguments>
+    </virtualType>
+
+</config>

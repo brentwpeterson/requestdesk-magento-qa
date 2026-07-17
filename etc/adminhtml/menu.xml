@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * RequestDesk Q&A Admin Menu
+ *
+ * Shared Q&A library — reused by blog posts and products, so it lives at its
+ * own top level under Content rather than inside the blog menu.
+ *
+ * @category  RequestDesk
+ * @package   RequestDesk_Qa
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="RequestDesk_Qa::qa"
+             title="Q&amp;A Library"
+             translate="title"
+             module="RequestDesk_Qa"
+             parent="Magento_Backend::content"
+             sortOrder="61"
+             resource="RequestDesk_Qa::qa"/>
+
+        <add id="RequestDesk_Qa::pairs_menu"
+             title="Q&amp;A Pairs"
+             translate="title"
+             module="RequestDesk_Qa"
+             parent="RequestDesk_Qa::qa"
+             sortOrder="10"
+             action="requestdesk_qa/pair/index"
+             resource="RequestDesk_Qa::pairs"/>
+    </menu>
+</config>
